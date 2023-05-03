@@ -72,7 +72,7 @@ def index():
                           "Comment": custComment}
                 reviews.append(mydict)
             logging.info("log my final result {}".format(reviews))
-            client=pymongo.MongoClient("mongodb+srv://aman9889:<password>@aman.3iet0o3.mongodb.net/?retryWrites=true&w=majority")
+            client=pymongo.MongoClient("mango_db_application_api_here")
             db=client['review_scrap']
             review_col=db['review_scrap_data']
             review_col.insert_many(reviews)
